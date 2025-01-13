@@ -190,7 +190,7 @@ export default function ProductForm({
                 value={description}
                 onChange={ev => setDescription(ev.target.value)}
             />
-            <label>Flavors</label>
+            <label>Flavors &#40;Recuerda poner el sabor separado por una <q>,</q> y si es el caso no poner espacios al principio &#41;</label>
             <input
                 type="text"
                 placeholder="Enter flavors separated by commas"
