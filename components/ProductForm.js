@@ -224,6 +224,8 @@ export default function ProductForm({
             ))}
             <button type="button" onClick={handleAddWeightAndPrice} className="btn-primary">Añadir peso y precio</button>
             <br />
+            <br />
+            <br />
             {/*<label>Price (in COP)</label>*/}
             {/*<input
                 type="number"
