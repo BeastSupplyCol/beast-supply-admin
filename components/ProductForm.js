@@ -9,7 +9,6 @@ export default function ProductForm({
     title: existingTitle,
     description: existingDescription,
     price: existingPrice,
-    priceCOL: existingPriceCOL,
     images: existingImages,
     category: assignedCategory,
     properties: assignedProperties,
@@ -21,7 +20,6 @@ export default function ProductForm({
     const [category, setCategory] = useState(assignedCategory || '');
     const [productProperties, setProductProperties] = useState(assignedProperties || {});
     const [price, setPrice] = useState(existingPrice || '');
-    const [priceCOL, setPriceCOL] = useState(existingPriceCOL || '');
     const [images, setImages] = useState(existingImages || []);
     const [goToProducts, setGoToProducts] = useState(false);
     const [isUploading, setIsUploading] = useState(false);
@@ -223,14 +221,6 @@ export default function ProductForm({
             ))}
             <button type="button" onClick={handleAddWeightAndPrice} className="btn-primary">Añadir peso y precio</button>
             <br />
-            <br />
-            {/*<label>Price (in COP)</label>*/}
-            {/*<input
-                type="number"
-                placeholder="Price"
-                value={priceCOL}
-                onChange={ev => setPriceCOL(ev.target.value)}
-            />*/}
             <br />
             <label>Precio (pon el mismo que colocaste en el de el peso y precio)</label>
             <input
