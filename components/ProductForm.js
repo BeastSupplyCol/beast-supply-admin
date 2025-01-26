@@ -125,14 +125,14 @@ export default function ProductForm({
 
     return (
         <form onSubmit={saveProduct}>
-            <label>Product name</label>
+            <label>Nombre del producto</label>
             <input
                 type="text"
-                placeholder="Product name"
+                placeholder="Nombre del producto"
                 value={title}
                 onChange={ev => setTitle(ev.target.value)}
             />
-            <label>Category</label>
+            <label>Categoria</label>
             <select
                 value={category}
                 onChange={ev => setCategory(ev.target.value)}
@@ -184,32 +184,32 @@ export default function ProductForm({
                     <input type="file" onChange={uploadImages} className="hidden" />
                 </label>
             </div>
-            <label>Description</label>
+            <label>Descripción</label>
             <textarea
-                placeholder="Description"
+                placeholder="Descripción del producto"
                 value={description}
                 onChange={ev => setDescription(ev.target.value)}
             />
             <label>Flavors &#40;Recuerda poner el sabor separado por una <q>,</q> y si es el caso no poner espacios al principio &#41; Ejemplo: Vainilla,Fruit Punch,Chocolate</label>
             <input
                 type="text"
-                placeholder="Enter flavors separated by commas"
+                placeholder="Introduce sabores separados por coma"
                 value={flavors}
                 onChange={handleFlavorsChange}
             />
-            <label>Weights and Prices</label>
+            <label>Pesos y Precios</label>
             {weightAndPrices.map((wp, index) => (
                 <div key={index} className="flex gap-2 mb-2">
                     <input
                         type="text"
-                        placeholder="Weight (e.g., 500g)"
+                        placeholder="Peso (Ejemplo: 500g)"
                         min="0"
                         value={wp.weight}
                         onChange={e => handleWeightAndPriceChange(index, 'weight', e.target.value)}
                     />
                     <input
                         type="text"
-                        placeholder="Price (USD)"
+                        placeholder="Precio (Ejemplo: 129.990)"
                         min="0"
                         value={wp.priceUnit}
                         onChange={e => handleWeightAndPriceChange(index, 'priceUnit', e.target.value)}
@@ -221,16 +221,16 @@ export default function ProductForm({
                     </button>
                 </div>
             ))}
-            <button type="button" onClick={handleAddWeightAndPrice} className="btn-primary">Add Weight and Price</button>
+            <button type="button" onClick={handleAddWeightAndPrice} className="btn-primary">Añadir peso y precio</button>
             <br />
-            <label>Price (in COP)</label>
-            <input
+            {/*<label>Price (in COP)</label>*/}
+            {/*<input
                 type="number"
                 placeholder="Price"
                 value={priceCOL}
                 onChange={ev => setPriceCOL(ev.target.value)}
-            />
-            <label>Price (in USD)</label>
+            />*/}
+            <label>Precio (pon el mismo que colocaste en el de el peso y precio)</label>
             <input
                 type="number"
                 placeholder="Price"
