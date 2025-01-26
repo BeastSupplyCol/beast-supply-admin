@@ -158,7 +158,7 @@ export default function ProductForm({
                     </div>
                 </div>
             ))}
-            <label>Photos</label>
+            <label>Fotos</label>
             <div className="mb-2 flex flex-wrap gap-1">
                 <ReactSortable
                     list={images}
@@ -180,7 +180,7 @@ export default function ProductForm({
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5" />
                     </svg>
-                    <div>Add Image</div>
+                    <div>Añadir imagen</div>
                     <input type="file" onChange={uploadImages} className="hidden" />
                 </label>
             </div>
@@ -190,7 +190,7 @@ export default function ProductForm({
                 value={description}
                 onChange={ev => setDescription(ev.target.value)}
             />
-            <label>Flavors &#40;Recuerda poner el sabor separado por una <q>,</q> y si es el caso no poner espacios al principio &#41; Ejemplo: Vainilla,Fruit Punch,Chocolate</label>
+            <label>Sabores &#40;Recuerda poner el sabor separado por una <q>,</q> y si es el caso no poner espacios al principio &#41; Ejemplo: Vainilla,Fruit Punch,Chocolate</label>
             <input
                 type="text"
                 placeholder="Introduce sabores separados por coma"
@@ -198,6 +198,7 @@ export default function ProductForm({
                 onChange={handleFlavorsChange}
             />
             <label>Pesos y Precios</label>
+            <br/>
             {weightAndPrices.map((wp, index) => (
                 <div key={index} className="flex gap-2 mb-2">
                     <input
@@ -230,14 +231,15 @@ export default function ProductForm({
                 value={priceCOL}
                 onChange={ev => setPriceCOL(ev.target.value)}
             />*/}
+            <br />
             <label>Precio (pon el mismo que colocaste en el de el peso y precio)</label>
             <input
                 type="number"
-                placeholder="Price"
+                placeholder="Precio"
                 value={price}
                 onChange={ev => setPrice(ev.target.value)}
             />
-            <button type="submit" className="btn-primary">Save</button>
+            <button type="submit" className="btn-primary">Guardar</button>
         </form>
     );
 }
