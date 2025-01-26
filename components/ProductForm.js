@@ -59,7 +59,6 @@ export default function ProductForm({
             title,
             description,
             price,
-            priceCOL,
             weightAndPrices: numericWeightAndPrices,
             flavors: parseFlavors(),
             images,
