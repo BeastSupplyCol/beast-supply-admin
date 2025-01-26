@@ -9,7 +9,6 @@ const productSchema = new Schema({
     title: { type: String, required: true },
     description: String,
     price: { type: Number, required: true }, // Price fuera de weightAndPrices
-    priceCOL: { type: Number, required: true },
     weightAndPrices: [weightAndPriceSchema],
     flavors: [{ type: String }],
     images: [{ type: String }],
