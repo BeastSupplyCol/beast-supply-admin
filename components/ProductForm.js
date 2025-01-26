@@ -197,7 +197,7 @@ export default function ProductForm({
                 value={flavors}
                 onChange={handleFlavorsChange}
             />
-            <label>Pesos y Precios</label>
+            <label>Pesos y Precio (Obligatorio)</label>
             <br/>
             {weightAndPrices.map((wp, index) => (
                 <div key={index} className="flex gap-2 mb-2">
