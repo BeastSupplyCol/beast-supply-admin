@@ -38,6 +38,10 @@ export default function ProductForm({
     const handleAddWeightAndPrice = () => {
         setWeightAndPrices([...weightAndPrices, { weight: '', priceUnit: '' }]);
     };
+    
+    const removeWeightAndPrice = (index) => {
+        setWeightAndPrices(prev => prev.filter((_, i) => i !== index));
+    };
 
     const handleFlavorsChange = (ev) => {
         setFlavors(ev.target.value);
